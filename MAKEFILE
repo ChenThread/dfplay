@@ -1,0 +1,8 @@
+.c.obj
+	wcc $<
+
+dfplay.exe: dfplay.obj dfpwm.obj
+  %write dfplay.lnk NAME   $@
+  %write dfplay.lnk FILE   dfplay.obj
+  %write dfplay.lnk FILE   dfpwm.obj
+  wlink @dfplay.lnk
